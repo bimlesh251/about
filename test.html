@@ -17,14 +17,6 @@
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-<!-- Srarch bar expand-->
 <script src="js/modernizr.custom.js"></script>
 </head>
 
@@ -461,50 +453,5 @@
 <!-- Bootstrap Core JavaScript --> 
 <script src="js/bootstrap.min.js"></script> 
 
-<!-- Custom Theme JavaScript --> 
-<script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-	
-	// Carousel Auto-Cycle
-  $(document).ready(function() {
-    $('.carousel').carousel({
-      interval: 10000
-    })
-    //for twitter
-
-    $.ajax({url: "tweets.php?count=3", success: function(result){
-        $("#tweets").html(result);
-    }});
-
-  });
-  
-    </script>
 </body>
 </html>
